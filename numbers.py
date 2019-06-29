@@ -14,7 +14,7 @@ def zeroPad(string, numToFill):
     for element in split:
       element2 = element.zfill(numToFill)
       print(element2, "element2")
-      replaced = string.replace(element, element2)
+      string = string.replace(element, element2)
       print(replaced)
   else:
     print(string)
