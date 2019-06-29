@@ -3,21 +3,17 @@ import re
 
 var1, var2 = sys.argv[1], int(sys.argv[2])
 
-def zeroPad(string, numToFill):
-  #replaced = string
+def zero_pad(string, num_to_fill):
   split = re.findall(r'\d+', string)
-
-  print(split, "split")
 
   if len(split):
 
     for element in split:
-      element2 = element.zfill(numToFill)
-      print(element2, "element2")
-      string = string.replace(element, element2)
-      print(replaced)
+      element2 = element.zfill(num_to_fill)
+    string = string.replace(element, element2)
+    print(string)
   else:
     print(string)
 
 
-zeroPad(var1, var2)
+zero_pad(var1, var2)
